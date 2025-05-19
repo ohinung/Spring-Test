@@ -35,7 +35,10 @@ public class Test01Controller {
 		scores.put("국어", 80);
 		scores.put("수학", 90);
 		scores.put("영어", 85);
+		
 		return scores;
 	}
+	
+	
 
 }
