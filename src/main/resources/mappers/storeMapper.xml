@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <!-- repository 인터페이스와 연동이 필요함 -->
+ <mapper namespace ="com.inong.spring.test.database.repository.StoreRepository">
+ 
+	 <select id = "selectStore"
+	 		resultType = "com.inong.spring.test.database.domain.Store">
+	 SELECT 
+	 `id`
+	 ,`phoneNumber`
+	 ,`address`
+	 ,`businessNumber`
+	 ,`introduce`
+	 ,`createdAt`
+	 ,`updatedAt`
+	 FROM 
+	 `store`;
+	 
+	 </select>
+ </mapper>
