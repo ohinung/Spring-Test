@@ -6,18 +6,21 @@
  <!-- repository 인터페이스와 연동이 필요함 -->
  <mapper namespace ="com.inong.spring.test.database.repository.StoreRepository">
  
+ <!-- 우리가 직접 만든 클래스의 객체로 대응시켜준다 마이바티스의 역할
+  -->
 	 <select id = "selectStore"
 	 		resultType = "com.inong.spring.test.database.domain.Store">
 	 SELECT 
-	 `id`
-	 ,`phoneNumber`
-	 ,`address`
-	 ,`businessNumber`
-	 ,`introduce`
-	 ,`createdAt`
-	 ,`updatedAt`
+		 `id`
+		 ,`name`
+		 ,`phoneNumber`
+		 ,`address`
+		 ,`businessNumber`
+		 ,`introduce`
+		 ,`createdAt`
+		 ,`updatedAt`
 	 FROM 
-	 `store`;
+		 `store`;
 	 
 	 </select>
  </mapper>

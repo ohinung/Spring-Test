@@ -14,8 +14,9 @@ public class StoreService {
 	@Autowired
 	private StoreRepository storeRepository;
 	
-	
+	//가게 정보 얻어오기
 	public List<Store> getStoreList() {
+		//store 테이블의 모든 행 조회
 		List<Store> storeList = storeRepository.selectStore();
 		return storeList;
 	}
