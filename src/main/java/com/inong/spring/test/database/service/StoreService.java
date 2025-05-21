@@ -16,7 +16,7 @@ public class StoreService {
 	
 	//가게 정보 얻어오기
 	public List<Store> getStoreList() {
-		//store 테이블의 모든 행 조회
+		//store 테이블의 모든 행 조
 		List<Store> storeList = storeRepository.selectStore();
 		return storeList;
 	}

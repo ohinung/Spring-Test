@@ -14,7 +14,7 @@ public class Store {
 	private LocalDateTime updatedAt;
 	
 	
-	//setter를 활용하여 사용할 수 있다.
+	//setter를 활용하여 객체를 자동으로 생성하고 
 	public int getId() {
 		return id;
 	}
