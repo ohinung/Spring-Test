@@ -1,5 +1,7 @@
 package com.inong.spring.test.mybatis.repository;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -10,6 +12,9 @@ public interface RealEstateRepository {
 	
 	public RealEstate selectRealEstate(@Param("id") int id);
 	
-	public RealEstate selectConditionedRealEstate(@Param("area") int area, @Param("price") int price);
+	
+	public List<RealEstate> selectRealEstateByRentPrice(@Param("rentPrice") int rentPrice);
+	//리턴 타입의 중요성!!!!!!!!!!!!!!!!!
+	public List<RealEstate> selectRealEstateByAreaAndPrice(@Param("area") int area, @Param("price") int price);
 }
 

@@ -1,5 +1,7 @@
 package com.inong.spring.test.mybatis;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,10 +27,23 @@ public class RealEstateController {
 		
 	}
 	
+	
 	@RequestMapping("/mybatis/real-estate/select/2")
-	public RealEstate conditionedRealEstate(@RequestParam("area") int area, @RequestParam("price") int price) {
+	@ResponseBody
+	public List<RealEstate> RealEstateByRentPrice(@RequestParam("rentPrice") int rentPrice) {
 		
-		RealEstate realEstate = realEstateService.getConditionedRealEstate(area,price);
+		List<RealEstate> realEstate = realEstateService.getRealEstateByRentPrice(rentPrice);
+		
+		return realEstate;
+	}
+	
+	@RequestMapping("/mybatis/real-estate/select/3")
+	@ResponseBody
+	public List<RealEstate> RealEstateByAreaAndPrice(@RequestParam("area") int area, @RequestParam("price") int price) {
+		
+		List<RealEstate> realEstate = realEstateService.getRealEstateByAreaAndPrice(area,price);
+		
+		return realEstate;
 	}
 	
 		

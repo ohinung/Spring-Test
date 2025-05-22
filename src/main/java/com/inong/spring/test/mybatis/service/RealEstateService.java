@@ -1,5 +1,7 @@
 package com.inong.spring.test.mybatis.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +21,13 @@ public class RealEstateService {
 		return realEstate;
 	}
 	
-	public RealEstate getConditionedRealEstate(int area, int price) {
-		RealEstate realEstate = realEstateRepository.selectConditionedRealEstate(area,price);
+	public List<RealEstate> getRealEstateByRentPrice(int rentPrice) {
+		List<RealEstate> realEstate = realEstateRepository.selectRealEstateByRentPrice(rentPrice);
+		return realEstate;
+	}
+	
+	public List<RealEstate> getRealEstateByAreaAndPrice(int area, int price) {
+		List<RealEstate> realEstate = realEstateRepository.selectRealEstateByAreaAndPrice(area,price);
+		return realEstate;
 	}
 }

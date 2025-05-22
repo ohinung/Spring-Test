@@ -27,8 +27,9 @@
  	</select>
  	
  	
- 	<select id = "selectConditionedRealEstate"
- 			resultType = "com.inong.spring.test.mybatis.domain.RealEstate"> 
+ 	<select id = "selectRealEstateByRentPrice"
+ 			resultType = "com.inong.spring.test.mybatis.domain.RealEstate"
+ 			parameterType="int"> 
  			SELECT 
  				`id`
  				,`realtorId`
@@ -42,7 +43,28 @@
  			FROM
  				`real_estate`
  			WHERE
- 				`area` > 80 and `price` > 100000;
+ 				`rentPrice` <![CDATA[<]]>  #{rentPrice};
+ 				 
+ 	</select>
+ 	
+ 	
+ 	<select id = "selectRealEstateByAreaAndPrice"
+ 			resultType = "com.inong.spring.test.mybatis.domain.RealEstate"
+ 			parameterType="map"> 
+ 			SELECT 
+ 				`id`
+ 				,`realtorId`
+ 				,`address`
+ 				,`area`
+ 				,`type`
+ 				,`price`
+ 				,`rentPrice`
+ 				,`createdAt`
+ 				,`updatedAt`
+ 			FROM
+ 				`real_estate`
+ 			WHERE
+ 				`area` > #{area} and `price` <![CDATA[<]]> #{price};
  				
  	</select>
  
