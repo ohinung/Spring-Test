@@ -8,15 +8,14 @@
 <body>
 
 
-<form method = "post" action="/mvc/seller/create">
 	<div class = "container">
 		<h2> 판매자 정보</h2> 
 		<img th:src="${seller.profileImage}"width = "300">
 		<div class="display-4" th:text="${seller.nickName}">에스파</div>
-		<h2 class = text-warning th:text="${seller.tempurature}">53.9</h2>
-		<button type = submit>입력</button>	
+		<h2 class = text-warning th:text="${seller.temperature}">53.9</h2>
+		
 	</div>
-</form>
+
 
 </body>
 </html>

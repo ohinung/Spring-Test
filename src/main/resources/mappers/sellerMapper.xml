@@ -6,36 +6,26 @@
  
  <mapper namespace = "com.inong.spring.test.mvc.repository.SellerRepository">
  	 
- 	<insert id = "selectLastSeller"
+ 	<insert id = "insertSeller"
  		parameterType = "map">
  		INSERT 
  			`seller`
 			(`nickName` 
-			, `tempurature`
+			, `temperature`
 			,`profileImage`)
 		VALUE
 			(#{nickName}
-			,#{tempurature}
+			,#{temperature}
 			,#{profileImage})
-			
-			 		
- 		
+
  		</insert>
  	
- 	
- 	
- 	
- 	
- 	
- 	
- 	
- 	
- 	
+ 
  	<select id = "selectLastSeller"
  	resultType = "com.inong.spring.test.mvc.domain.Seller">
  		SELECT 
  			`nickName`
- 			,`tempurature`
+ 			,`temperature`
  			,`profileImage`
  			,`createdAt`
  			,`updatedAt`
@@ -52,12 +42,14 @@
  		resultType = "com.inong.spring.test.mvc.domain.Seller">
 	 		SELECT 
 	 			`nickName`
-	 			,`tempurature`
+	 			,`temperature`
 	 			,`profileImage`
 	 			,`createdAt`
 	 			,`updatedAt`
 	 		FROM
-	 			`seller`;
+	 			`seller`
+	 		WHERE 
+	 			`id`= #{id};
  		</select>
  
  

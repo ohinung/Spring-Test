@@ -6,10 +6,12 @@ public class Seller {
 	
 	private int id;
 	private String nickName;
-	private String tempurature;
+	private String temperature;
 	private String profileImage;
 	private LocalDateTime createdAt;
 	private LocalDateTime updatedAt;
+	
+	
 	public int getId() {
 		return id;
 	}
@@ -22,11 +24,11 @@ public class Seller {
 	public void setNickName(String nickName) {
 		this.nickName = nickName;
 	}
-	public String getTempurature() {
-		return tempurature;
+	public String getTemperature() {
+		return temperature;
 	}
-	public void setTempurature(String tempurature) {
-		this.tempurature = tempurature;
+	public void setTemperature(String temperature) {
+		this.temperature = temperature;
 	}
 	public String getProfileImage() {
 		return profileImage;

@@ -9,7 +9,7 @@ import com.inong.spring.test.mvc.domain.Seller;
 public interface SellerRepository {
 	
 	public int insertSeller(
-			@Param("nickname") String nickname
+			@Param("nickName") String nickName
 			,@Param("temperature") double temperature
 			,@Param("profileImage") String profileImage
 			);

@@ -12,10 +12,10 @@ public class SellerService {
 	private SellerRepository sellerRepository;
 	
 	public int addSeller(
-			String nickname
+			String nickName
 			,double temperature
 			,String profileImage) {
-		int count = sellerRepository.insertSeller(nickname, temperature,profileImage);
+		int count = sellerRepository.insertSeller(nickName, temperature,profileImage);
 		return count;
 	}
 	

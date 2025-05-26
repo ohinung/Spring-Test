@@ -23,12 +23,12 @@ public class SellerController {
 	
 	@PostMapping("/mvc/seller/create")
 	public String createSeller(
-			@RequestParam("nickname") String nickname
+			@RequestParam("nickName") String nickName
 			,@RequestParam("temperature") double temperature
 			,@RequestParam("profileImage") String profileImage) {
 		
 		
-		int count = sellerService.addSeller(nickname, temperature,profileImage);
+		int count = sellerService.addSeller(nickName, temperature,profileImage);
 		
 		return "redirect:/mvc/seller/info";
 	}
