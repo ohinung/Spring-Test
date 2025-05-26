@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+
+
+<form method = "post" action="/mvc/seller/create">
+	<div class = "container">
+		<h2> 판매자 정보</h2> 
+		<img th:src="${seller.profileImage}"width = "300">
+		<div class="display-4" th:text="${seller.nickName}">에스파</div>
+		<h2 class = text-warning th:text="${seller.tempurature}">53.9</h2>
+		<button type = submit>입력</button>	
+	</div>
+</form>
+
+</body>
+</html>
